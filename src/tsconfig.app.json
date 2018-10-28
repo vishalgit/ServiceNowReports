@@ -2,14 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": [],
-    "baseUrl": "./",
-    "paths": {
-      "@app/*":["app/*"],
-      "@env/*":["environments/*"],
-      "@core/*":["app/core/*"],
-      "@shared/*":["app/shared/*"]
-    }
+    "types": []
+    
   },
   "exclude": [
     "test.ts",
