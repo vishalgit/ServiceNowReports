@@ -1,2 +1,17 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+<mat-sidenav-container fxLayout="row">
+    <mat-sidenav #sidenav
+    [mode]="isHandset?'over':'side'" 
+    [opened]="!isHandset" fxFlex="240px">
+        <mat-toolbar color="primary">Menu</mat-toolbar>
+        <mat-list>
+            <mat-list-item>List1</mat-list-item>
+            <mat-list-item>List2</mat-list-item>
+            <mat-list-item>List3</mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlex>
+        <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
