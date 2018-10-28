@@ -1,11 +1,15 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LayoutService } from './layout.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [],
+  providers:[
+    LayoutService
+  ]
 })
 export class CoreModule { 
   constructor(

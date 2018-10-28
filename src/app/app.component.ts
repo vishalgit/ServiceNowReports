@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LayoutService } from '@core/layout.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ServiceNowReports';
+  isSpinnerVisible$: Observable<boolean> = this.layoutService.isNavigationPending$;
+  constructor(private layoutService: LayoutService){
+
+  }
 }
